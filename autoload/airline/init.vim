@@ -105,6 +105,7 @@ function! airline#init#sections()
   endif
   if !exists('g:airline_section_z')
     let g:airline_section_z = airline#section#create(['%3p%%'.spc, 'linenr', ':%3c '])
+    let g:airline_section_z .= ' [%b][0x%B]'
   endif
   if !exists('g:airline_section_warning')
     let g:airline_section_warning = airline#section#create(['syntastic', 'eclim', 'whitespace'])
